@@ -3,7 +3,7 @@
   "description": "Gatsby hello world starter",
   "license": "MIT",
   "scripts": {
-    "develop": "gatsby develop",
+    "develop": "gatsby develop -p $port -H $host",
     "start": "npm run develop",
     "build": "gatsby build",
     "serve": "gatsby serve"
@@ -17,6 +17,7 @@
     "gatsby-transformer-remark": "^2.1.17",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
+    "react-icons": "^3.3.0",
     "react-typography": "^0.16.18",
     "typography": "^0.16.18",
     "typography-theme-kirkham": "^0.16.18"

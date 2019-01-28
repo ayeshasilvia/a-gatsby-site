@@ -1,5 +1,6 @@
 import React from 'react'
 import { css } from "@emotion/core"
+import { FaGithub, FaLinkedin, FaFacebook, FaTwitter } from "react-icons/fa"
 
 const Footer = () => {
     
@@ -22,15 +23,8 @@ const Footer = () => {
                 width: 100%;`}>
                     <div css={css`
                     float: left;`}>
-                        <div css={css`
-                        font-size: 1.2rem;
-                        line-height: normal;
-                        color: purple;`}>
-                            &copy; 2018 Ayesha M. All Rights Reserved.
-                        </div>
-                    </div>
-                    <div css={css`float: right;`}>
-                        <div css={css`text-align: right;`}>
+                       {/* <div css={css`float: right;`}> */}
+                        {/* <div css={css`text-align: right;`}> */}
                             <ul css={css`
                             margin: 0;
                             padding: 0;
@@ -56,12 +50,7 @@ const Footer = () => {
                                     }
                                     `}
                                     href="https://twitter.com/ayeshasilvia" target="_blank">
-                                        <i css={css`
-                                        @include icon;
-                                        border-bottom: none;
-                                        position: relative;
-                                        `}
-                                        className="fab fa-twitter"/>
+                                        <FaTwitter className="social-icon" size="32" />
                                     </a>
                                 </li>
                                 <li css={css`
@@ -84,14 +73,40 @@ const Footer = () => {
                                     }
                                     `}
                                     href="https://github.com/ayeshasilvia" target="_blank">
-                                        <i className="fab fa-github"></i>
+                                        <FaGithub className="social-icon" size="32" />
+                                    </a>
+                                </li>
+                                <li css={css`
+                                margin: 0;
+                                padding: 0;
+                                list-style-type: none;
+                                display: inline-block;
+                                width: auto;
+                                margin: 0 3rem 0 0;
+                                `}>    
+                                    <a css={css`
+                                    margin: 0;
+                                    padding: 0;
+                                    list-style-type: none;
+                                    font-size: 2rem;
+                                    line-height: normal;
+                                    color: $white;
+                                    `}
+                                    href="https://www.facebook.com/silvia.ayesha" target="_blank">
+                                        <FaFacebook className="social-icon" size="32" />
                                     </a>
                                 </li>
                             </ul>
+                        {/* </div> */}
+                    {/* </div> */}
+                    <div css={css`
+                        font-size: 1.2rem;
+                        line-height: normal;
+                        color: purple;`}>
+                            &copy; 2018 Ayesha M. All Rights Reserved.
                         </div>
                     </div>
                 </div>
-                
             </div>
         </footer>
     );  
