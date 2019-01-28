@@ -4,6 +4,19 @@ import { rhythm } from "../utils/typography"
 import { StaticQuery, Link, graphql } from "gatsby"
 import Header from "./Header";
 import Footer from "./Footer";
+import styled from "styled-components"
+import img from '../assets/graphics/bg-1.jpg';
+
+const Container = styled.div`
+display: flex;
+background-image: url(${img});
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-size: cover;
+justify-content: center;
+width: 1700px;
+height: 1000px;
+`
 
 export default ({ children }) => (
     <StaticQuery
@@ -18,11 +31,11 @@ export default ({ children }) => (
     `
 }
     render={data => (
-  <div css={css`
-  @include vendor('background-image', 'url("../assets/graphics/background_img.jpg")');
-  `}>
+    <div>
   <Header title={data.site.siteMetadata.title}/>
+  <Container>
   {children}
+  </Container>
   <Footer/>
   </div>
   )}
