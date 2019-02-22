@@ -14,8 +14,8 @@ background-attachment: fixed;
 background-repeat: no-repeat;
 background-size: cover;
 justify-content: center;
-width: 1700px;
-height: 1000px;
+max-width: 1700px;
+height: 900px;
 `
 
 export default ({ children }) => (

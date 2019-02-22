@@ -3,45 +3,49 @@ import Layout from "../components/layout"
 import { Link, graphql } from "gatsby"
 import { css } from "@emotion/core"
 import { rhythm } from "../utils/typography"
+import styled from "styled-components"
+
+const Title = styled.h1`
+display: inline-block;
+border-bottom: 1px solid;
+color: white;
+`
+const StyledH3 = styled.h3`
+margin-bottom: ${rhythm(1 / 4)};
+color: white;
+`
+const StyledSpan = styled.span`
+color: white;
+`
+
+const StyledLink = styled.span`
+text-decoration: none;
+color: white;
+`
+const StyledP = styled.p`
+color: white;
+`
 
 export default ({data}) => {
   console.log(data)
   return (
     <Layout>
       <div>
-        <h1 
-        css={css`
-        display: inline-block;
-        border-bottom: 1px solid;
-        `}
-        >
-        An amazing Gatsby site
-        </h1>
+        <Title>An amazing Gatsby site</Title>
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({node}) => (
           <div key={node.id}>
-          <Link to={node.fields.slug}
-          css={css`
-          text-decoration: none;
-          color: inherit;
-          `}>
-          <h3
-          css={css`
-          margin-bottom: ${rhythm(1 / 4)};
-        `}
-          >
+          <StyledLink>
+          <Link to={node.fields.slug}>
+          <StyledH3>
           {node.frontmatter.title} {" "}
-          <span
-          css={css`
-          color: #bbb;
-          `}
-          >
+          <StyledSpan>
           - {node.frontmatter.date}
-          </span>
-          </h3>
-          <p>{node.excerpt}</p>
-
+          </StyledSpan>
+          </StyledH3>
+          <StyledP>{node.excerpt}</StyledP>
           </Link>
+          </StyledLink>
           </div>
         )
         )}
