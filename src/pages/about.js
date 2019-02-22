@@ -2,6 +2,17 @@ import React from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import styled from "styled-components"
+import moon from '../assets/graphics/Moon.jpg';
+import mocha from '../assets/graphics/soy-mocha.jpg';
+
+// const Container = styled.div`
+//   margin: 3rem auto;
+//   max-width: 600px;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+// `
 
 const UserWrapper = styled.div`
   display: flex;
@@ -50,13 +61,13 @@ export default ({data}) => (
     {/* <Container> */}
     <p>Styled Components is cool</p>
     <User
-      username="Jane Doe"
-      avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
+      username="Moon"
+      avatar={moon}
       excerpt="I'm Jane Doe. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
     />
     <User
-      username="Bob Smith"
-      avatar="https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg"
+      username="Soy mocha"
+      avatar={mocha}
       excerpt="I'm Bob smith, a vertically aligned type of guy. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
     />
   {/* </Container> */}

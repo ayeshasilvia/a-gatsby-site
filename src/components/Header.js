@@ -25,13 +25,13 @@ const Header = (props) => (
           font-style: normal;
           color: purple;
         `} 
-        to="/">Home</Link>&nbsp;
+        to="/">Home</Link>&nbsp;&nbsp;
         <Link css={css`
           margin-left: ${rhythm(2)};
           font-style: normal;
           color: purple;
         `} 
-        to="/about">About</Link>
+        to="/about">About</Link>&nbsp;&nbsp;
         <Link css={css`
           margin-left: ${rhythm(3)};
           font-style: normal;

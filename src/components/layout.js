@@ -16,6 +16,7 @@ background-size: cover;
 justify-content: center;
 max-width: 1700px;
 height: 900px;
+color: white;
 `
 
 export default ({ children }) => (
