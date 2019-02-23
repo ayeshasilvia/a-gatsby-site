@@ -1,114 +1,102 @@
 import React from 'react'
 import { css } from "@emotion/core"
 import { FaGithub, FaLinkedin, FaFacebook, FaTwitter } from "react-icons/fa"
+import styled from "styled-components"
+
+const StyledFooter = styled.footer`
+	background-color: beige;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: normal 16px sans-serif;
+	padding: 45px 50px;
+	margin-top: 80px;
+`
+
+const StyledFooterLeft = styled.div`
+	color:  #8f9296;
+	font-size: 14px;
+	margin: 0;
+`
+
+/* Footer links */
+
+const StyledFooterLinksP = styled.p`
+	font-size:18px;
+	font-weight: bold;
+	color:  #ffffff;
+	margin: 0 0 10px;
+	padding: 0;
+`
+
+const StyledFooterLinksA = styled.a`
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+`
+
+const StyledFooterRight = styled.div`
+	float: right;
+	margin-top: 6px;
+	max-width: 180px;
+`
+const StyledFooterRightA = styled.a`
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color:  #33383b;
+    border-radius: 2px;
+
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+
+    margin-left: 3px;
+`
 
 const Footer = () => {
     
     return (
-        <footer css={css`
-        display: inline-block;
-        width: 100%;
-        margin: 8rem auto 0;
-        padding: 7.5rem 10px;
-        background-color: beige;
-        `}>
-            <div css={css`
-            display: block;
-            position: relative;
-            max-width: 114.0rem;
-            margin: 0 auto;
-            padding: 0;`}>
-                <div css={css`
-                display: inline-block;
-                width: 100%;`}>
-                    <div css={css`
-                    float: left;`}>
-                       {/* <div css={css`float: right;`}> */}
-                        {/* <div css={css`text-align: right;`}> */}
-                            <ul css={css`
-                            margin: 0;
-                            padding: 0;
-                            list-style-type: none;
-                            `}>
-                                <li css={css`
-                                margin: 0;
-                                padding: 0;
-                                list-style-type: none;
-                                display: inline-block;
-                                width: auto;
-                                margin: 0 3rem 0 0;
-                                `}>    
-                                    <a css={css`
-                                    margin: 0;
-                                    padding: 0;
-                                    list-style-type: none;
-                                    font-size: 2rem;
-                                    line-height: normal;
-                                    color: $white;
-                                    &:hover {
-                                        color: $orange;
-                                    }
-                                    `}
-                                    href="https://twitter.com/ayeshasilvia" target="_blank">
-                                        <FaTwitter className="social-icon" size="32" />
-                                    </a>
-                                </li>
-                                <li css={css`
-                                margin: 0;
-                                padding: 0;
-                                list-style-type: none;
-                                display: inline-block;
-                                width: auto;
-                                margin: 0 3rem 0 0;
-                                `}>    
-                                    <a css={css`
-                                    margin: 0;
-                                    padding: 0;
-                                    list-style-type: none;
-                                    font-size: 2rem;
-                                    line-height: normal;
-                                    color: $white;
-                                    &:hover {
-                                        color: $orange;
-                                    }
-                                    `}
-                                    href="https://github.com/ayeshasilvia" target="_blank">
-                                        <FaGithub className="social-icon" size="32" />
-                                    </a>
-                                </li>
-                                <li css={css`
-                                margin: 0;
-                                padding: 0;
-                                list-style-type: none;
-                                display: inline-block;
-                                width: auto;
-                                margin: 0 3rem 0 0;
-                                `}>    
-                                    <a css={css`
-                                    margin: 0;
-                                    padding: 0;
-                                    list-style-type: none;
-                                    font-size: 2rem;
-                                    line-height: normal;
-                                    color: $white;
-                                    `}
-                                    href="https://www.facebook.com/silvia.ayesha" target="_blank">
-                                        <FaFacebook className="social-icon" size="32" />
-                                    </a>
-                                </li>
-                            </ul>
-                        {/* </div> */}
-                    {/* </div> */}
-                    <div css={css`
-                        font-size: 1.2rem;
-                        line-height: normal;
-                        color: purple;`}>
-                            &copy; 2018 Ayesha M. All Rights Reserved.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+
+        <StyledFooter>
+       
+			<StyledFooterRight>
+            	<a href="https://twitter.com/ayeshasilvia" target="_blank">
+                    <FaTwitter className="social-icon" size="32" />
+                </a>
+			    <a href="https://www.facebook.com/silvia.ayesha" target="_blank">
+                    <FaFacebook className="social-icon" size="32" />
+                </a>
+                <a href="https://github.com/ayeshasilvia" target="_blank">
+                    <FaGithub className="social-icon" size="32" />
+                </a>
+				<a href="https://www.linkedin.com/in/ayeshasilvia/" target="_blank">
+                    <FaLinkedin className="social-icon" size="32" />
+                </a>
+                
+            </StyledFooterRight>
+
+			<StyledFooterLeft> 
+
+				<StyledFooterLinksP>
+                	<a href="/">Home</a>
+                    .
+					<a href="/about">About</a>
+					·.
+					<a href="/events">Events</a>
+                    ..
+					<a href="/">Contact</a>
+                
+				</StyledFooterLinksP>
+
+				<p>Ayesha M &copy; 2019</p>
+            </StyledFooterLeft>
+
+        </StyledFooter>
+
     );  
 };
 

@@ -63,12 +63,12 @@ export default ({data}) => (
     <User
       username="Moon"
       avatar={moon}
-      excerpt="I'm Jane Doe. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+      excerpt="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
     />
     <User
       username="Soy mocha"
       avatar={mocha}
-      excerpt="I'm Bob smith, a vertically aligned type of guy. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+      excerpt="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
     />
   {/* </Container> */}
   </Layout>
